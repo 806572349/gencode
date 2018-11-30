@@ -1,0 +1,60 @@
+package ${package}.controller;
+
+import java.util.List;
+import java.util.Map;
+
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
+
+import ${package}.model.${className};
+import ${package}.service.${className}ServiceInterface;
+
+/**
+ * ${comments}Controller
+ *
+ * @author ${author}
+ * @email ${email}
+ * @date ${datetime}
+ */
+@Slf4j
+@RestController
+@RequestMapping("/${pathName}")
+public class ${className}Controller {
+    @Autowired
+    private ${className}ServiceInterface ${classname}Service;
+
+    /**
+     * 查看单个
+     */
+    @GetMapping("/{${pk.attrname}}")
+    public ${className} findById(@PathVariable("${pk.attrname}") ${pk.attrType} ${pk.attrname}) {
+        return ${classname}Service.findById(${pk.attrname});
+    }
+    /**
+     * 保存
+     */
+    @PostMapping
+    public ${className}  save( ${className} ${classname}) {
+        ${classname}Service.save(${classname});
+        return ${classname};
+    }
+
+    /**
+     * 修改
+     */
+    @PutMapping
+    public int update(@RequestBody ${className} ${classname}) {
+        return ${classname}Service.update(${classname});
+    }
+
+    /**
+     * 删除
+     */
+    @DeleteMapping
+    public int delete(${pk.attrType} ${pk.attrname}) {
+        return  ${classname}Service.delete(${pk.attrname});
+    }
+
+
+}

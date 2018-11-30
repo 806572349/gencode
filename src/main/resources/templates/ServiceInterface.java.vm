@@ -1,0 +1,48 @@
+package ${package}.service;
+
+import ${package}.model.${className};
+/**
+ * ${comments}ServiceInterface
+ *
+ * @author ${author}
+ * @date ${datetime}
+ */
+public interface ${className}ServiceInterface  {
+
+
+
+
+    /**
+     * 根据主键查询实体
+     *
+     * @param id 主键
+     * @return 实体
+     */
+    ${className} findById(${pk.attrType} ${pk.attrname});
+
+    /**
+     * 保存实体
+     *
+     * @param ${classname} 实体
+     * @return 保存条数
+     */
+    int save(${className} ${classname});
+
+    /**
+     * 根据主键更新实体
+     *
+     * @param ${classname} 实体
+     * @return 更新条数
+     */
+    int update(${className} ${classname});
+
+    /**
+     * 根据主键删除
+     *
+     * @param ${pk.attrname}
+     * @return 删除条数
+     */
+    int delete(${pk.attrType} ${pk.attrname});
+
+}
+

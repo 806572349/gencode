@@ -1,0 +1,18 @@
+package ${package}.dao;
+
+import ${package}.model.${className};
+import org.springframework.stereotype.Repository;
+import ${package}.BaseDao;
+import lombok.extern.slf4j.Slf4j;
+/**
+ * ${comments}Dao
+ *
+ * @author ${author}
+ * @email ${email}
+ * @date ${datetime}
+ */
+@Slf4j
+@Repository
+public class ${className}Dao extends BaseDao<${className}> {
+
+}
